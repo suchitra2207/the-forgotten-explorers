@@ -1,0 +1,790 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+/* =========================================
+   1. PURPLE CELESTIAL COLOUR PALETTE
+========================================= */
+
+:root {
+    --navy: #171426;
+    --navy-light: #211b35;
+    --ivory: #f1eee6;
+    --muted: #b4adbd;
+    --gold: #c5a66b;
+    --line: rgba(241, 238, 230, 0.14);
+
+    --purple: #302641;
+    --purple-light: #40334f;
+    --lavender: #c5a6d2;
+    --lavender-soft: rgba(197, 166, 210, 0.15);
+
+    --transition: 0.3s ease;
+}
+
+/* =========================================
+   2. RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background: var(--navy);
+    color: var(--ivory);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 2px solid var(--lavender);
+    outline-offset: 4px;
+}
+
+/* =========================================
+   3. HEADER & NAVIGATION
+========================================= */
+
+.site-header {
+    width: 100%;
+    min-height: 82px;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    border-bottom: 1px solid var(--line);
+    background: #171426;
+    position: relative;
+    z-index: 20;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--lavender);
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.navigation a {
+    color: var(--muted);
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color var(--transition);
+}
+
+.navigation a:hover {
+    color: var(--lavender);
+}
+
+/* =========================================
+   4. HERO SECTION
+========================================= */
+
+.hero {
+    min-height: 610px;
+    padding: 130px 12% 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    background:
+        radial-gradient(
+            ellipse at 78% 45%,
+            rgba(112, 82, 145, 0.28),
+            transparent 45%
+        ),
+        radial-gradient(
+            ellipse at 20% 80%,
+            rgba(80, 65, 112, 0.14),
+            transparent 40%
+        ),
+        linear-gradient(
+            120deg,
+            #171426 35%,
+            #282039 100%
+        );
+
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    border: 1px solid rgba(197, 166, 210, 0.22);
+    border-radius: 50%;
+    right: 12%;
+    top: 20%;
+
+    box-shadow:
+        0 0 0 35px rgba(197, 166, 210, 0.035),
+        0 0 0 75px rgba(197, 166, 210, 0.025);
+
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+}
+
+.eyebrow {
+    color: var(--lavender);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(54px, 8vw, 92px);
+    line-height: 1.05;
+    font-weight: 400;
+    letter-spacing: -2px;
+}
+
+.hero h1 span,
+.closing h2 span {
+    color: var(--lavender);
+    font-style: italic;
+}
+
+.hero-description {
+    color: #d0cbd5;
+    max-width: 490px;
+    margin: 28px 0 34px;
+    font-size: 15px;
+}
+
+.primary-button {
+    display: inline-flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--gold);
+    padding: 13px 20px;
+    color: var(--ivory);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: var(--transition);
+    min-height: 46px;
+}
+
+.primary-button:hover {
+    background: var(--gold);
+    color: var(--navy);
+}
+
+.primary-button span {
+    font-size: 16px;
+}
+
+.hero-caption {
+    position: absolute;
+    bottom: 28px;
+    right: 8%;
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+/* =========================================
+   5. GENERAL SECTIONS
+========================================= */
+
+.section-padding {
+    padding: 100px 10%;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    margin-bottom: 48px;
+}
+
+.section-heading h2,
+.intro h2,
+.closing h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.2;
+}
+
+.section-note {
+    max-width: 250px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* =========================================
+   6. INTRO SECTION
+========================================= */
+
+.intro {
+    background: #f1eee6;
+    color: #211b35;
+    text-align: center;
+}
+
+.intro .eyebrow,
+.closing .eyebrow {
+    color: #80658e;
+}
+
+.intro-copy {
+    max-width: 650px;
+    margin: 25px auto 0;
+    color: #625d68;
+    font-size: 14px;
+}
+
+/* =========================================
+   7. COLLECTIONS
+========================================= */
+
+.collections {
+    background: #1c172b;
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.collection-card {
+    min-width: 0;
+    min-height: 330px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border: 1px solid var(--line);
+
+    background:
+        linear-gradient(
+            145deg,
+            #342a45,
+            #211b35
+        );
+
+    transition:
+        transform var(--transition),
+        border-color var(--transition);
+}
+
+.collection-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--lavender);
+}
+
+.mars-card {
+    background: linear-gradient(145deg, #493442, #251e31);
+}
+
+.beyond-card {
+    background: linear-gradient(145deg, #39344f, #211b35);
+}
+
+.collection-number,
+.collection-link {
+    color: var(--gold);
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.collection-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 29px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+.collection-card p {
+    color: #d0cbd5;
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 24px;
+}
+
+/* =========================================
+   8. EXHIBITION BACKGROUNDS
+========================================= */
+
+.exhibition {
+    background: #171426;
+}
+
+.mars-exhibition {
+    background: #1c172b;
+    border-top: 1px solid var(--line);
+}
+
+.deep-space-exhibition {
+    background: #171426;
+    border-top: 1px solid var(--line);
+}
+
+/* =========================================
+   9. EXHIBIT CARDS
+========================================= */
+
+.exhibit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    align-items: stretch;
+}
+
+.exhibit-card {
+    min-width: 0;
+    background: #241e34;
+    border: 1px solid var(--line);
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    transition:
+        transform var(--transition),
+        border-color var(--transition);
+}
+
+.exhibit-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(197, 166, 210, 0.65);
+}
+
+.exhibit-image {
+    width: 100%;
+    height: 230px;
+    position: relative;
+    overflow: hidden;
+    background: #302641;
+}
+
+.exhibit-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.exhibit-card:hover .exhibit-image img {
+    transform: scale(1.05);
+}
+
+.image-label {
+    position: absolute;
+    bottom: 12px;
+    left: 14px;
+    max-width: calc(100% - 28px);
+    padding: 6px 9px;
+
+    background: rgba(23, 20, 38, 0.9);
+    color: var(--ivory);
+
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.exhibit-info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.exhibit-category {
+    color: var(--lavender);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.exhibit-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 14px;
+}
+
+.exhibit-info > p:not(.exhibit-category) {
+    color: #c5c0cc;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.exhibit-status {
+    margin-top: auto;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    color: #e0dce3;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    line-height: 1.7;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--gold);
+    margin-right: 7px;
+}
+
+.source-link {
+    display: inline-block;
+    margin-top: 18px;
+    color: var(--gold);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.7;
+    transition: color var(--transition);
+}
+
+.source-link:hover {
+    color: var(--lavender);
+}
+
+/* =========================================
+   10. CLOSING SECTION
+========================================= */
+
+.closing {
+    text-align: center;
+    background: #f1eee6;
+    color: #211b35;
+}
+
+.closing h2 span {
+    color: #80658e;
+}
+
+.closing > p:last-child {
+    max-width: 550px;
+    margin: 25px auto 0;
+    color: #625d68;
+    font-size: 13px;
+}
+
+/* =========================================
+   11. FOOTER
+========================================= */
+
+.site-footer {
+    padding: 35px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    background: #100d1d;
+    border-top: 1px solid var(--line);
+}
+
+.site-footer > p {
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.site-footer .footer-credit {
+    width: 100%;
+    text-align: center;
+    letter-spacing: 0;
+    font-size: 10px;
+}
+
+/* =========================================
+   12. TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+
+    .site-header {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .navigation {
+        gap: 20px;
+    }
+
+    .section-padding {
+        padding: 80px 7%;
+    }
+
+    .exhibit-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .collection-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero {
+        padding-left: 9%;
+        padding-right: 9%;
+    }
+}
+
+/* =========================================
+   13. MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    html {
+        scroll-padding-top: 20px;
+    }
+
+    .site-header {
+        min-height: auto;
+        padding: 17px 5%;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .navigation {
+        width: 100%;
+        justify-content: center;
+        gap: 10px 17px;
+    }
+
+    .navigation a {
+        font-size: 9px;
+        letter-spacing: 0.7px;
+    }
+
+    .hero {
+        min-height: 550px;
+        padding: 95px 7% 85px;
+    }
+
+    .hero::after {
+        width: 230px;
+        height: 230px;
+        right: -110px;
+        top: 34%;
+    }
+
+    .hero h1 {
+        font-size: clamp(48px, 12vw, 65px);
+        letter-spacing: -1.5px;
+    }
+
+    .hero-description {
+        max-width: 100%;
+        font-size: 13px;
+        margin: 23px 0 29px;
+    }
+
+    .eyebrow {
+        font-size: 9px;
+        letter-spacing: 2px;
+        margin-bottom: 17px;
+    }
+
+    .primary-button {
+        padding: 13px 16px;
+        gap: 16px;
+        font-size: 9px;
+    }
+
+    .hero-caption {
+        left: 7%;
+        right: auto;
+        bottom: 22px;
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .section-padding {
+        padding: 65px 6%;
+    }
+
+    .section-heading {
+        display: block;
+        margin-bottom: 32px;
+    }
+
+    .section-heading h2,
+    .intro h2,
+    .closing h2 {
+        font-size: clamp(35px, 9vw, 45px);
+    }
+
+    .section-note {
+        max-width: 100%;
+        margin-top: 16px;
+        font-size: 11px;
+    }
+
+    .intro-copy {
+        font-size: 13px;
+    }
+
+    .collection-grid,
+    .exhibit-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 17px;
+    }
+
+    .collection-card {
+        min-height: 245px;
+        padding: 23px;
+    }
+
+    .collection-card h3 {
+        font-size: 27px;
+    }
+
+    .exhibit-image {
+        height: 245px;
+    }
+
+    .exhibit-info {
+        padding: 22px;
+    }
+
+    .exhibit-info h3 {
+        font-size: 24px;
+    }
+
+    .exhibit-info > p:not(.exhibit-category) {
+        font-size: 12px;
+    }
+
+    .image-label {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .site-footer {
+        padding: 30px 6%;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 14px;
+    }
+
+    .site-footer .footer-credit {
+        line-height: 1.8;
+    }
+}
+
+/* =========================================
+   14. SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+    .navigation {
+        gap: 9px 12px;
+    }
+
+    .navigation a {
+        font-size: 8px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero {
+        min-height: 510px;
+    }
+
+    .section-heading h2,
+    .intro h2,
+    .closing h2 {
+        font-size: 34px;
+    }
+
+    .exhibit-image {
+        height: 210px;
+    }
+
+    .exhibit-info {
+        padding: 18px;
+    }
+}
+
+/* =========================================
+   15. ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
