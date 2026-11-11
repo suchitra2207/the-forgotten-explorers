@@ -788,3 +788,58 @@ input:focus-visible {
         transition-duration: 0.01ms !important;
     }
 }
+/* =========================================
+   PROJECT CREDITS & NASA DISCLAIMER
+========================================= */
+
+.project-credit {
+    margin-top: 35px;
+    padding: 28px 20px 18px;
+    border-top: 1px solid var(--line);
+    text-align: center;
+}
+
+.project-credit p {
+    margin: 7px 0;
+}
+
+.credit-title {
+    color: var(--lavender);
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.project-credit strong {
+    color: var(--ivory);
+    font-weight: 600;
+}
+
+.credit-description {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.credit-disclaimer {
+    color: var(--muted);
+    font-size: 11px;
+    opacity: 0.8;
+    max-width: 650px;
+    margin: 12px auto 0 !important;
+    line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+    .project-credit {
+        padding: 24px 14px 15px;
+    }
+
+    .credit-title {
+        font-size: 10px;
+    }
+
+    .credit-description,
+    .credit-disclaimer {
+        font-size: 11px;
+    }
+}
