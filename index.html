@@ -7,10 +7,8 @@
 
     <!-- SEO -->
     <meta name="description" content="Discover The Forgotten Explorers, an interactive digital space museum by LONE ORBIT. Explore the stories of Apollo lunar equipment, Mars rovers, Voyager spacecraft and humanity's journey beyond Earth.">
-
     <meta name="keywords" content="NASA, Space Apps Challenge 2026, space exploration, Apollo, Mars rovers, Voyager, New Horizons, abandoned space equipment, digital space museum">
-
-    <meta name="author" content="LONE ORBIT">
+    <meta name="author" content="Suchitra Satapathy">
     <meta name="robots" content="index, follow">
 
     <!-- BROWSER APPEARANCE -->
@@ -40,6 +38,133 @@
 
     <!-- STYLESHEET -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- CREATOR AND PROJECT CREDIT STYLES -->
+    <style>
+        .creator-section {
+            background: #211b35;
+            padding: 80px 8%;
+            border-top: 1px solid rgba(241, 238, 230, 0.14);
+        }
+
+        .creator-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .creator-eyebrow {
+            color: #c5a66b;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .creator-heading {
+            color: #f1eee6;
+            font-size: clamp(30px, 4vw, 48px);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .creator-heading span {
+            color: #c5a6d2;
+        }
+
+        .creator-intro {
+            color: #b4adbd;
+            font-size: 16px;
+            line-height: 1.9;
+            max-width: 800px;
+            margin-bottom: 35px;
+        }
+
+        .creator-highlights {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .creator-highlight {
+            background: #302641;
+            border: 1px solid rgba(197, 166, 210, 0.18);
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .creator-highlight h3 {
+            color: #c5a6d2;
+            font-size: 16px;
+            margin: 0 0 10px;
+        }
+
+        .creator-highlight p {
+            color: #b4adbd;
+            font-size: 14px;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .project-credit {
+            margin: 35px auto 0;
+            padding: 30px 20px 12px;
+            border-top: 1px solid rgba(241, 238, 230, 0.14);
+            text-align: center;
+            max-width: 850px;
+        }
+
+        .project-credit p {
+            margin: 8px 0;
+            line-height: 1.8;
+        }
+
+        .project-credit .credit-title {
+            color: #c5a6d2;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .project-credit strong {
+            color: #f1eee6;
+            font-weight: 600;
+        }
+
+        .project-credit .credit-description {
+            color: #b4adbd;
+            font-size: 13px;
+        }
+
+        .project-credit .credit-disclaimer {
+            color: #b4adbd;
+            font-size: 12px;
+            opacity: 0.85;
+            max-width: 680px;
+            margin: 14px auto 0;
+        }
+
+        @media (max-width: 700px) {
+            .creator-section {
+                padding: 60px 6%;
+            }
+
+            .creator-highlights {
+                grid-template-columns: 1fr;
+            }
+
+            .creator-highlight {
+                padding: 20px;
+            }
+
+            .creator-intro {
+                font-size: 15px;
+            }
+
+            .project-credit {
+                padding: 25px 12px 10px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -502,18 +627,132 @@
             </p>
         </section>
 
+        <!-- ABOUT THE CREATOR -->
+
+        <section class="creator-section" id="creator">
+            <div class="creator-container">
+
+                <p class="creator-eyebrow">
+                    THE PERSON BEHIND LONE ORBIT
+                </p>
+
+                <h2 class="creator-heading">
+                    About the <span>Creator.</span>
+                </h2>
+
+                <p class="creator-intro">
+                    Hi, I'm <strong>Suchitra Satapathy</strong>, a software
+                    engineer, technology enthusiast, researcher and
+                    creative storyteller.
+
+                    I created The Forgotten Explorers as an independent
+                    project for the NASA Space Apps Challenge 2026,
+                    bringing together my interests in technology,
+                    scientific exploration, education and storytelling.
+                </p>
+
+                <div class="creator-highlights">
+
+                    <div class="creator-highlight">
+                        <h3>Software Engineering & Innovation</h3>
+                        <p>
+                            Working across data analytics, automation
+                            and enterprise technology, with an interest
+                            in building practical and engaging digital
+                            experiences.
+                        </p>
+                    </div>
+
+                    <div class="creator-highlight">
+                        <h3>AI & Emerging Technologies</h3>
+                        <p>
+                            Exploring Generative AI, intelligent
+                            applications and the possibilities of
+                            technology-driven innovation.
+                        </p>
+                    </div>
+
+                    <div class="creator-highlight">
+                        <h3>Space & Science Enthusiasm</h3>
+                        <p>
+                            Curious about space exploration, scientific
+                            discoveries and the technologies that help
+                            humanity understand the universe.
+                        </p>
+                    </div>
+
+                    <div class="creator-highlight">
+                        <h3>Research & Digital Inclusion</h3>
+                        <p>
+                            Interested in the intersection of technology,
+                            society, STEM education, women's empowerment
+                            and equitable access to opportunities.
+                        </p>
+                    </div>
+
+                    <div class="creator-highlight">
+                        <h3>Award-Winning Writer & Published Author</h3>
+                        <p>
+                            Winner of the You Are the Story Contest
+                            (Young India Challenge, 2023), featured
+                            in magazines and anthologies, and author
+                            of a book on empowerment.
+                        </p>
+                    </div>
+
+                    <div class="creator-highlight">
+                        <h3>Creative Storytelling</h3>
+                        <p>
+                            Passionate about writing, painting,
+                            photography and visual communication,
+                            using creativity to make complex ideas
+                            accessible and memorable.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
     </main>
 
     <!-- FOOTER -->
 
     <footer class="site-footer">
+
         <a href="#home" class="logo">LONE ORBIT<span>.</span></a>
+
         <p>THE FORGOTTEN EXPLORERS</p>
-        <p class="footer-credit">
-            An independent storytelling project for NASA Space Apps Challenge 2026.
-        </p>
+
+        <!-- PROJECT CREDIT AND DISCLAIMER -->
+
+        <div class="project-credit">
+
+            <p class="credit-title">
+                LONE ORBIT · THE FORGOTTEN EXPLORERS
+            </p>
+
+            <p>
+                Created by <strong>Suchitra Satapathy</strong>
+            </p>
+
+            <p class="credit-description">
+                An independent project developed for the
+                NASA Space Apps Challenge 2026.
+            </p>
+
+            <p class="credit-disclaimer">
+                This is an independent educational project.
+                It is not an official NASA website and is not
+                affiliated with or endorsed by NASA.
+            </p>
+
+        </div>
+
     </footer>
 
     <script src="script.js"></script>
+
 </body>
 </html>
